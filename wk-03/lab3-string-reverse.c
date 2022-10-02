@@ -31,6 +31,8 @@ int main(int argc, char *argv[]) {
 	} else {
 		printf("One argument needed!\n");
 	}
+
+	/* Return 0 for successful execution */
 	return 0;
 }
 

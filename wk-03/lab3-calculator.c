@@ -29,7 +29,8 @@ int main(int argc, char *argv[]) {
 
 		/* Initializing output to the return of our calculate function */
 		float output = calculate(num1, num2, operator);
-		/* If our function returns a 0, there's an error, and we'll output "invalid", otherwise output return */
+		/* If our function returns a 0, there's an error, and we'll 
+		 * output "invalid", otherwise output return */
 		if (output == 0) {
 			printf("invalid\n");
 		} else {

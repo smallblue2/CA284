@@ -38,6 +38,9 @@ int main(int argc, char **argv) {
 			printf("Found %i at %i\n", find, index);
 		}
 	}
+
+	/* Return 0 for successful execution */ 
+	return 0;
 }
 
 /* Search function */

@@ -26,6 +26,9 @@ int main(int argc, char *argv[]) {
 
 	/* Outputting largest number */
 	printf("%i\n", biggest(int_arg, argc));
+
+	/* Return 0 for successful execution */
+	return 0;
 }
 
 /* Biggest function */
