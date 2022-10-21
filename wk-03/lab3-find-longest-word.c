@@ -1,48 +1,32 @@
-/*
+/* 
  * Author: Niall Ryan
- * Description: Find the longest word in a given sentence
- * Input: A sentence given from cmdline
- * Output: The longest word in the inputted sentence
+ * Description: Finds the longest word in a sentence
  *
+ * Input: A sentence from argv
+ * Output: The longest word in that sentence
  */
 
-/* Includes */
+// Includes
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-/* Function prototypes */
-void largest(char *string);
-
-/* Main function */
 int main(int argc, char **argv) {
+    char string[50];
+    strcpy(string, argv[1]);
+    int i, start = 0, longest = 0, longest_pos = 0;
 
-	largest(argv[1]);
-	/* We return 0 for a succesful execution */
-	return 0;
-}
+    for (i = 0; string[i] != '\0'; i++) {
+        if (string[i] == ' ') {
+            start = i + 1;
+        } else {
+            if (i - start > longest) {
+                longest = i - start;
+                longest_pos = start;
+            }
+        }
+    }    
+    printf("%.*s\n", longest + 1, string + longest_pos);
 
-void largest(char *string) {
-	int total_length = strlen(string);
-	int longest_length = 0;
-	int cur_length = 0;
-	int index = 0;
-	for ( int i = 0; i < total_length; ++i ) {
-		if ( string[i] != ' ' ) {
-			cur_length++;
-		} else {
-			if ( cur_length > longest_length ) {
-				longest_length = cur_length;
-				index = i - cur_length;
-			}
-			cur_length = 0;
-		}
-	}
-
-	char output[longest_length + 1];
-	int j = 0;
-	for ( int i = index; i < longest_length; ++i ) {
-		output[j] = string[i];
-		j++;
-	}
-	printf("%s\n", output);
+    return 0;
 }
