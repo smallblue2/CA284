@@ -1,1 +1,9 @@
-*.o
+# Ignore everything
+*
+
+# Unignore repositories
+!*/
+
+# Unignore c files
+!*.c
+
