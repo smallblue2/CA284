@@ -12,6 +12,6 @@ Through the learning of this course, I was able to;
 3. Demonstrate ability to understand basic intention of a program through its binary representation and apply these skills to debugging programs.
 4. Investigate the programmer’s interaction with the underlying system through the different APIs and abstractions.
 5. Analyse the consequences of imperfect system usage, such as poor memory and CPU performance, crashes, and security vulnerabilities.
-.6 Apply analytical abilities to create reliable and efficient programs exercising the different components of a modern computing system.
+6. Apply analytical abilities to create reliable and efficient programs exercising the different components of a modern computing system.
 
 
